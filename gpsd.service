@@ -1,0 +1,12 @@
+[Unit]
+Description=gps service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/home/user
+ExecStart=python3 /home/user/daemon.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
